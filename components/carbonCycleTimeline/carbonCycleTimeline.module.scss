@@ -1,0 +1,32 @@
+.timeline_wrapper {
+  position: relative;
+  margin: 50px 0px;
+  padding: 20px 190px;
+}
+.timeline_container {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0px;
+  
+}
+.left_image {
+  width: fit-content;
+  z-index: 2;
+}
+.right_container {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 6%;
+}
+.timeline_image {
+  border-radius: 10px;
+}
+.straight_line {
+  position: absolute;
+  top: 30%;
+  left: 340px;
+  height: 40%;
+  border-left: 0.15rem solid #124734;
+}

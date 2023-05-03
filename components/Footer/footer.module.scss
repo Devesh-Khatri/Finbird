@@ -1,0 +1,41 @@
+.footer_wrapper {
+    display: flex;
+    justify-content: space-between;
+    padding: 4% 4%;
+}
+.footer_left {
+    width: 15%;
+}
+.footer_middle {
+    display: flex;
+    justify-content: space-between;
+    width: 50%;
+}
+.footer_right {
+    display: flex;
+    flex-direction: column;
+}
+.footer_blog_container {
+    padding-top: 25px;
+    display: flex;
+}
+.blog_info {
+    padding-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.socialMediaIconsContainer {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+.iconContainer {
+    background: #E9E5DD;
+    height: 40px;
+    width: 40px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
