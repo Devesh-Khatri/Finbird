@@ -36,6 +36,7 @@ $base-color: #001a18;
   align-items: center;
   letter-spacing: 0.1em;
   color: #ffffff !important;
+  cursor: pointer;
 }
 .navbar_nav {
   list-style: none;
@@ -52,4 +53,26 @@ $base-color: #001a18;
   text-decoration: none;
   padding: 0px 40px;
 
+}
+.hamburger {
+  display: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    padding: 30px 3%; 
+  }
+  .navbar_nav {
+    display: none;
+  
+  }
+  .navbar_brand {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  .hamburger {
+    display: block;
+  }
 }

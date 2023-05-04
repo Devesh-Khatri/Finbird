@@ -7,7 +7,12 @@
   display: flex;
   justify-content: space-between;
   margin: 100px 0px;
-  
+}
+.timeline_container_middle {
+  display: flex;
+  justify-content: space-between;
+  margin: 100px 0px;
+  padding-left: 70px;
 }
 .left_image {
   width: fit-content;
@@ -29,4 +34,23 @@
   left: 340px;
   height: 40%;
   border-left: 0.15rem solid #124734;
+}
+
+@media only screen and (max-width: 1024px) {
+  .timeline_wrapper {
+    position: relative;
+    margin: 0px 0px;
+    padding: 0px 5%;
+  }
+  .timeline_container {
+    flex-direction: column;
+  }
+  .right_container {
+    padding: 10% 0px;
+    width: 100%;
+  }
+  .timeline_container_middle {
+    flex-direction: column;
+    padding-left: 0px;
+  }
 }

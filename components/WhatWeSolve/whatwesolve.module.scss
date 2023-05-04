@@ -1,0 +1,73 @@
+.wrapper {
+  margin: 5% 5%;
+}
+.paragraph {
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  margin: 0px 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: rgba(0, 26, 24, 0.6);
+}
+.gridComponent {
+  display: flex;
+  margin: 5% 0px;
+}
+.flexItem {
+  flex: 1;
+  padding: 0px 2%;
+}
+.itemWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  margin: 15% 0px;
+}
+.alignLeftItemWrapper {
+  display: flex;
+  flex-direction: column;
+  margin: 15% 0px;
+}
+.iconWrapper {
+  width: 40px;
+  height: 40px;
+  background: rgba(51, 51, 51, 0.08);
+  border-radius: 4px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.heading {
+  margin-top: 8px;
+  font-weight: 700;
+  font-size: 1.2rem;
+  line-height: 150%;
+  /* identical to box height, or 30px */
+  display: flex;
+  align-items: center;
+  color: #333333;
+}
+.ItemParagraph {
+  font-size: 14px;
+  line-height: 21px;
+  /* identical to box height, or 149% */
+
+  display: flex;
+  align-items: center;
+  text-align: right;
+
+  color: #333333;
+}
+
+@media only screen and (max-width: 900px) {
+  .gridComponent {
+    flex-direction: column;
+  }
+  .paragraph {
+    margin: 0
+  }
+}
+

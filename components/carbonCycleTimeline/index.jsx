@@ -4,7 +4,7 @@ import styles from "./carbonCycleTimeline.module.scss";
 const CarbonCycleTimeline = () => {
   return (
     <div className={styles.timeline_wrapper}>
-      <div className={styles.straight_line}></div>
+      {/* <div className={styles.straight_line}></div> */}
       <div className={styles.timeline_container}>
         <div className={styles.left_image}>
           <img
@@ -15,13 +15,13 @@ const CarbonCycleTimeline = () => {
         </div>
         <div className={styles.right_container}>
           <div>
-            <h3
+            <div
               className="sub-heading"
               style={{ display: "flex", alignItems: "center" }}
             >
               <span className="sub-heading-number">1</span> Planning and
               Preparation
-            </h3>
+            </div>
             <p className="light-paragraph">
               Identify the project and conduct a baseline emission assessment{" "}
               <br />
@@ -31,10 +31,7 @@ const CarbonCycleTimeline = () => {
           </div>
         </div>
       </div>
-      <div
-        className={styles.timeline_container}
-        style={{ paddingLeft: "70px" }}
-      >
+      <div className={styles.timeline_container_middle}>
         <div className={styles.left_image}>
           <img
             className={styles.timeline_image}

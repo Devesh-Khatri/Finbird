@@ -6,8 +6,8 @@ const FooterLeft = () => {
   return (
     <>
       <div className={styles.footer_left}>
-        <div className="footer-heading">SUSTAINIAM</div>
-        <p className="footer-text">
+        <div className={styles.footer_heading}>SUSTAINIAM</div>
+        <p className={styles.footer_text}>
           We create digital experiences for brands and companies by using
           technology.
         </p>

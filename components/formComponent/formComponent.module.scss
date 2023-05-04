@@ -1,15 +1,27 @@
-
 .form_wrapper {
-    padding: 0px 4% 5%  4%;
+  padding: 0px 4% 5% 4%;
 }
 .form_container {
-    padding: 80px 80px 80px 80px;
-    background: linear-gradient(90deg, #e2e5da 0%, #cee6e4 100%);
-    border-radius: 24px;   
+  padding: 80px 80px 80px 80px;
+  background: linear-gradient(90deg, #e2e5da 0%, #cee6e4 100%);
+  border-radius: 24px;
 }
 .inputForm_Container {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
 
+@media only screen and (max-width: 1024px) {
+  .form_wrapper {
+    padding: 0px 4% 5% 4%;
+  }
+  .form_container {
+    padding: 2%;
+    background: linear-gradient(90deg, #e2e5da 0%, #cee6e4 100%);
+    border-radius: 24px;
+  }
+  .inputForm_Container {
+    margin-top: 80px;
+  }
 }
