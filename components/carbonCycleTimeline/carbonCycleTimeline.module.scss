@@ -1,4 +1,6 @@
 .timeline_wrapper {
+  // display: flex;
+  justify-content: center;
   position: relative;
   margin: 50px 0px;
   padding: 20px 190px;
@@ -27,6 +29,8 @@
 }
 .timeline_image {
   border-radius: 10px;
+  width: 20rem;
+  height: 26.6rem;
 }
 .straight_line {
   position: absolute;
@@ -37,6 +41,9 @@
 }
 
 @media only screen and (max-width: 1024px) {
+  .straight_line {
+    display: none;
+  }
   .timeline_wrapper {
     position: relative;
     margin: 0px 0px;

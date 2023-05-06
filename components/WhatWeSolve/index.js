@@ -9,34 +9,35 @@ const gridData1 = [
   {
     title: "1. Transparency and Liquidity",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/1.svg",
   },
   {
     title: "2. Standard Price Discovery",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/2.svg",
   },
   {
     title: "3. Instant P2P Transactions",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/3.svg",
   },
 ];
+
 const gridData2 = [
   {
     title: "4. Digital Carbon Tokens",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/4.svg",
   },
   {
     title: "5. Smart Contract Enabled",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/5.svg",
   },
   {
     title: "6. Secure Key Vault",
     desc: "We help secure financing for new carbon projects.",
-    img: "",
+    img: "/images/what-we-solve/6.svg",
   },
 ];
 
@@ -47,7 +48,7 @@ const ItemComponent = ({ data, key, alignLeft }) => {
       className={alignLeft ? styles.alignLeftItemWrapper : styles.itemWrapper}
     >
       <div className={styles.iconWrapper}>
-        <img src="/images/what-we-solve/1.svg" alt="thumbnail" />
+        <img src={data.img} alt="thumbnail" />
       </div>
       <div className={styles.heading}>{data.title}</div>
       <div className={styles.ItemParagraph}>
@@ -85,7 +86,7 @@ const WhatWeSolve = () => {
             );
           })}
         </div>
-        <div className={styles.flexItem}>
+        <div className={styles.flexItemCenter}>
           <CoinCarouselComponent />
         </div>
         <div className={styles.flexItem}>
@@ -94,7 +95,7 @@ const WhatWeSolve = () => {
               <ItemComponent
                 key={index + 4}
                 data={item}
-                alignLeft={breakpoint == "mobile" ? true : false}
+                alignLeft
               />
             );
           })}

@@ -4,13 +4,13 @@ import styles from "./carbonCycleTimeline.module.scss";
 const CarbonCycleTimeline = () => {
   return (
     <div className={styles.timeline_wrapper}>
-      {/* <div className={styles.straight_line}></div> */}
+      <div className={styles.straight_line}></div>
       <div className={styles.timeline_container}>
         <div className={styles.left_image}>
           <img
             className={styles.timeline_image}
-            src="/images/timeline-images/1.png"
-            alt="1.png"
+            src="/images/timeline-images/1.jpg"
+            alt="1.jpg"
           />
         </div>
         <div className={styles.right_container}>
@@ -59,8 +59,8 @@ const CarbonCycleTimeline = () => {
         <div className={styles.left_image}>
           <img
             className={styles.timeline_image}
-            src="/images/timeline-images/3.png"
-            alt="1.png"
+            src="/images/timeline-images/3.jpg"
+            alt="1.jpg"
           />
         </div>
         <div className={styles.right_container}>

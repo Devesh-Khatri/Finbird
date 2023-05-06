@@ -1,27 +1,36 @@
 import React, { useEffect, useState } from "react";
-import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import styles from "./carousel.module.scss";
+import Carousel from "react-multi-carousel";
 // import { FaChevronLeft, FaChevronRight } from "react-icons/fa";
 
 const CoinCarouselComponent = () => {
-  const CustomLeftArrow = ({ onClick }) => {
+
+
+  const ButtonGroup = ({ next, previous, goToSlide, ...rest }) => {
+    const { carouselState: { currentSlide } } = rest;
+    return (
+      <div className={styles.ButtonGroup}> 
+      <CustomLeftArrow previous={previous} />
+      <CustomRightArrow next={next} />
+      {/* // remember to give it position:absolute */}
+        {/* <div className={currentSlide === 0 ? 'disable' : ''} onClick={() => previous()}>asdsadas</div>
+        <div onClick={() => next()} />
+        <div onClick={() => goToSlide(currentSlide + 1)}> Go to any slide </div> */}
+      </div>
+    );
+  };
+
+  const CustomLeftArrow = ({ previous }) => {
     return (
       <div
-        style={{
-          width: "100px",
-          height: "100px",
-          position: "absolute",
-          marginTop: "400px",
-          left: "20%",
-        }}
-        onClick={() => onClick()}
+        onClick={() => previous()}
       >
         <div
           className={styles.circleWrapper}
-          onClick={() => {
-            activeCarousel !== 1 && setActiveCarousel(activeCarousel - 1);
-          }}
+          // onClick={() => {
+          //   activeCarousel !== 1 && setActiveCarousel(activeCarousel - 1);
+          // }}
         >
           <img src={`/images/carousel/left.svg`} alt="1.png" />
         </div>
@@ -29,23 +38,13 @@ const CoinCarouselComponent = () => {
     );
   };
 
-  const CustomRightArrow = ({ onClick }) => {
+  const CustomRightArrow = ({ next }) => {
     return (
       <div
-        style={{
-          width: "100px",
-          height: "100px",
-          position: "absolute",
-          right: "20%",
-          marginTop: "300px",
-        }}
-        onClick={() => onClick()}
+        onClick={() => next()}
       >
         <div
           className={styles.circleWrapper}
-          onClick={() => {
-            activeCarousel < 8 && setActiveCarousel(activeCarousel + 1);
-          }}
         >
           <img src={`/images/carousel/right.svg`} alt="1.png" />
         </div>
@@ -71,13 +70,13 @@ const CoinCarouselComponent = () => {
   return (
     <div className={styles.wrapper}>
       <Carousel
+        rewind={true}
+        infinite={true}
         responsive={responsive}
-        // customLeftArrow={<CustomLeftArrow />}
-        // customRightArrow={<CustomRightArrow />}
-        renderButtonGroupOutside={true}
-        arrows={true}
+        arrows={false}
+        renderButtonGroupOutside={true} 
+        customButtonGroup={<ButtonGroup />}
         // centerMode={true}
-        // showDots
         // renderArrowsWhenDisabled
       >
         <div className={styles.imageWrapper}>
@@ -92,7 +91,6 @@ const CoinCarouselComponent = () => {
         <div className={styles.imageWrapper}>
           <img src="/images/what-we-solve/carousel/4.svg" alt="thumbnail" />
         </div>
-
       </Carousel>
     </div>
   );

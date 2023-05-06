@@ -15,7 +15,6 @@ const HeroSection = ({ heading, subHeading, root }) => {
     return flatArr;
   }
   const flatArr = createCopiesAndFlatten(arr);
-  console.log(flatArr, "flatArr");
 
   return (
     <>

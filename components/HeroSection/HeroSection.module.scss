@@ -2,6 +2,7 @@ $base-color: #001a18;
 
 .hero_section_container {
   display: flex;
+  min-height: 800px;
   height: 82vh;
   padding: 0px 6%;
   background-color: $base-color;

@@ -8,6 +8,7 @@ import SubFooter from "../components/subFooter";
 import FooterComponent from "../components/Footer";
 import CarouselComponent from "../components/CarouselComponent";
 import WhatWeSolve from "../components/WhatWeSolve";
+import IndexSubFooter from "../components/indexSubFooter";
 
 const index = () => {
   return (
@@ -23,7 +24,8 @@ const index = () => {
       {/* <CarbonCycleTimeline /> */}
       {/* <FormComponent /> */}
       {/* <SubFooter /> */}
-      <CarouselComponent /> 
+      <CarouselComponent />
+      <IndexSubFooter /> 
       <FooterComponent />
     </>
   );
