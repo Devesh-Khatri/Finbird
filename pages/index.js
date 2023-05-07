@@ -1,14 +1,13 @@
 import React from "react";
-import NavBar from "../components/navBar";
-import HeroSection from "../components/HeroSection";
-import SubHeroSection from "../components/SubHeroSection";
-import CarbonCycleTimeline from "../components/carbonCycleTimeline";
-import FormComponent from "../components/formComponent";
-import SubFooter from "../components/subFooter";
-import FooterComponent from "../components/Footer";
+import CarbonExplore from "../components/CarbonExplore";
+import CardStack from "../components/CardStack";
 import CarouselComponent from "../components/CarouselComponent";
+import FooterComponent from "../components/Footer";
+import HeroSection from "../components/HeroSection";
 import WhatWeSolve from "../components/WhatWeSolve";
+import WorldFirstCarbonExchange from "../components/WorldFirstCarbonExchange";
 import IndexSubFooter from "../components/indexSubFooter";
+import NavBar from "../components/navBar";
 
 const index = () => {
   return (
@@ -20,12 +19,15 @@ const index = () => {
         subHeading="A way to bring carbon emissions down and enabling green economy by putting a price on carbon & encouraging businesses to take action to reduce impact on the environment."
       />
       <WhatWeSolve />
+      <WorldFirstCarbonExchange />
       {/* <SubHeroSection /> */}
       {/* <CarbonCycleTimeline /> */}
       {/* <FormComponent /> */}
       {/* <SubFooter /> */}
+      <CarbonExplore />
       <CarouselComponent />
-      <IndexSubFooter /> 
+      <CardStack />
+      <IndexSubFooter />
       <FooterComponent />
     </>
   );

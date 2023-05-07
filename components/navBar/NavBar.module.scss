@@ -1,4 +1,4 @@
-$base-color: #001a18;
+$base-color: #001A18;
 
 .navbar {
   background-color: $base-color;
@@ -74,5 +74,11 @@ $base-color: #001a18;
   }
   .hamburger {
     display: block;
+  }
+  .mobileTopBar {
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 2rem;
+    align-items: center;
   }
 }

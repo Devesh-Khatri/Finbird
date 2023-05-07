@@ -1,9 +1,6 @@
 import React from "react";
 import styles from "./whatwesolve.module.scss";
 import CoinCarouselComponent from "../CoinCarousel";
-import useBreakpoint from "use-breakpoint";
-
-const BREAKPOINTS = { mobile: 1024, tablet: 1024, desktop: 1280 };
 
 const gridData1 = [
   {
@@ -60,10 +57,6 @@ const ItemComponent = ({ data, key, alignLeft }) => {
 
 const WhatWeSolve = () => {
   
-  const { breakpoint, maxWidth, minWidth } = useBreakpoint(
-    BREAKPOINTS,
-    "desktop"
-  );
 
   return (
     <div className={styles.wrapper}>
@@ -75,21 +68,20 @@ const WhatWeSolve = () => {
       </div>
 
       <div className={styles.gridComponent}>
-        <div className={styles.flexItem}>
+        <div className={styles.flexItem1}>
           {gridData1.map((item, index) => {
             return (
               <ItemComponent
                 key={index}
                 data={item}
-                alignLeft={breakpoint == "mobile" ? true : false}
               />
             );
           })}
         </div>
-        <div className={styles.flexItemCenter}>
+        <div className={styles.flexItem2}>
           <CoinCarouselComponent />
         </div>
-        <div className={styles.flexItem}>
+        <div className={styles.flexItem3}>
           {gridData2.map((item, index) => {
             return (
               <ItemComponent

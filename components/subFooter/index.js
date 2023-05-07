@@ -83,7 +83,7 @@ const SubFooter = () => {
                 </div>
               );
             })
-          : subFooterList.map((item) => {
+          : mobileSubFooterList.map((item) => {
               return (
                 <div className={styles.subFooter_Item}>
                   <img

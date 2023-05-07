@@ -14,7 +14,7 @@ const index = () => {
       <NavBar />
       <HeroSection
         heading="Become A Carbon developer"
-        subHeading="Bringing carbon down, and enabling green economy, by trading carbon credits"
+        subHeading="Lorem Ipsum"
       />
       <SubHeroSection />
       <CarbonCycleTimeline />

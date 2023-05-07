@@ -1,7 +1,6 @@
+import { useRouter } from "next/router";
 import React, { useState } from "react";
 import styles from "./NavBar.module.scss";
-import Link from "next/link";
-import { useRouter } from "next/router";
 
 const NavBar = () => {
   const [openNav, setOpenNav] = useState(false);
@@ -53,28 +52,45 @@ const NavBar = () => {
           </li>
         </ul>
       </div>
-      <div style={{ width: openNav ? "300px" : "0px" }} class="sidenav">
-        <a
-          onClick={() => {
-            setOpenNav(!openNav);
-          }}
-          href="javascript:void(0)"
-          class="closebtn"
-          onclick="closeNav()"
-        >
-          &times;
-        </a>
-        <a href="#">About Us</a>
+      <div style={{ width: openNav ? "100vw" : "0px" }} class="sidenav">
+        <div className={styles.mobileTopBar}>
+          <img
+            onClick={() => {
+              router.push("/");
+            }}
+            src={`/images/mobileNav/logo.svg`}
+            alt="1.png"
+          />
+          <img
+            onClick={() => {
+              setOpenNav(!openNav);
+            }}
+            src={`/images/mobileNav/cross.svg`}
+            alt="1.png"
+          />
+        </div>
+
+        <a href="#">Tokens</a>
         <a
           href="#"
           onClick={() => {
-            router.push("/carbon-development");
+            router.push("/carbon-development") && setOpenNav(!openNav);
           }}
         >
           Carbon Development
         </a>
+        <a
+          href="#"
+          onClick={() => {
+            router.push("/about-us") && setOpenNav(!openNav);
+          }}
+        >
+          About Us
+        </a>
         <a href="#">Contact</a>
         <a href="#">FAQ</a>
+        <a href="#">Login</a>
+        <a href="#">Signup</a>
       </div>
     </nav>
   );

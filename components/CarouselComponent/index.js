@@ -84,9 +84,9 @@ const CarouselComponent = () => {
       <div className={styles.lefttArrow} onClick={() => onClick()}>
         <div
           className={styles.circleWrapper}
-          onClick={() => {
-            activeCarousel !== 1 && setActiveCarousel(activeCarousel - 1);
-          }}
+          // onClick={() => {
+          //   activeCarousel !== 1 && setActiveCarousel(activeCarousel - 1);
+          // }}
         >
           <img src={`/images/carousel/left.svg`} alt="1.png" />
         </div>
@@ -99,9 +99,9 @@ const CarouselComponent = () => {
       <div className={styles.rightArrow} onClick={() => onClick()}>
         <div
           className={styles.circleWrapper}
-          onClick={() => {
-            activeCarousel < 8 && setActiveCarousel(activeCarousel + 1);
-          }}
+          // onClick={() => {
+          //   activeCarousel < 8 && setActiveCarousel(activeCarousel + 1);
+          // }}
         >
           <img src={`/images/carousel/right.svg`} alt="1.png" />
         </div>
@@ -132,11 +132,15 @@ const CarouselComponent = () => {
         with us!
       </div>
       <Carousel
+        afterChange={(previousSlide, { currentSlide, onMove }) => {
+          console.log(currentSlide, "currentSlide");
+        }}
         responsive={responsive}
         customLeftArrow={<CustomLeftArrow />}
         customRightArrow={<CustomRightArrow />}
         renderButtonGroupOutside={true}
         arrows={true}
+        focusOnSelect={true}
         // centerMode={true}
         // showDots
         renderArrowsWhenDisabled

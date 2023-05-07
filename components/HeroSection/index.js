@@ -18,37 +18,63 @@ const HeroSection = ({ heading, subHeading, root }) => {
 
   return (
     <>
-      <div className={styles.hero_section_container}>
-        <div className={styles.left_container}>
+      <div
+        className={
+          root
+            ? styles.hero_section_container
+            : styles.short_hero_section_container
+        }
+      >
+        <div className={root ? styles.left_container : styles.full_container}>
           <h1 className={styles.hero_title}>{heading}</h1>
           <p className={styles.hero_subTitle}>{subHeading}</p>
 
           {root && <Button text="Register Interest" />}
         </div>
-        <div className={styles.right_container}>
-          <img
-            src={root ? "/images/index.svg" : "/images/carbon-development.png"}
-            className={root ? styles.root_hero_image : styles.hero_image}
-            alt="Mayur"
-          />
-        </div>
+        {root && (
+          <div className={styles.right_container}>
+            <img
+              src={
+                root ? "/images/index.svg" : "/images/carbon-development.png"
+              }
+              className={root ? styles.root_hero_image : styles.hero_image}
+              alt="Mayur"
+            />
+          </div>
+        )}
       </div>
-      {root && <Marquee duration={100000} background="#2F2F2F" height="4rem">
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SNBT</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SRET</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SEBT</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SAOT</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SPRT</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SICT</div>
-        <div className={styles.dotWrapper}><span className={styles.dot}></span></div>
-        <div className={styles.marqueeText}>SCET</div>
-        </Marquee>}
+      {root && (
+        <Marquee duration={50000} background="#2F2F2F" height="4rem">
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SNBT</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SRET</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SEBT</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SAOT</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SPRT</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SICT</div>
+          <div className={styles.dotWrapper}>
+            <span className={styles.dot}></span>
+          </div>
+          <div className={styles.marqueeText}>SCET</div>
+        </Marquee>
+      )}
     </>
   );
 };

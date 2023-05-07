@@ -7,6 +7,11 @@ $base-color: #001a18;
   padding: 0px 6%;
   background-color: $base-color;
 }
+.short_hero_section_container {
+  display: flex;
+  height: 400px;
+  background-color: $base-color;
+}
 .left_container {
   width: 45%;
   height: 100%;
@@ -41,6 +46,19 @@ $base-color: #001a18;
   display: flex;
   justify-content: center;
   align-items: flex-end;
+  
+}
+.full_container {
+  width: 100%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-image: url('/images/carbon-development-hero.png');
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 .hero_image {
   height: 612px;
@@ -123,5 +141,14 @@ $base-color: #001a18;
   }
   .marqueeText {
     font-size: 18px;
+  }
+  .full_container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-start;
+    text-align: start;
+    padding: 2rem;
   }
 }

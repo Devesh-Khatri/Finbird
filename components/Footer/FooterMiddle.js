@@ -11,7 +11,7 @@ const FooterMiddle = () => {
   );
   return (
     <>
-    {breakpoint == 'mobile' && <div className={styles.divider}></div>}
+    {breakpoint == 'mobile' && <div className='divider'></div>}
     <div className={styles.footer_middle}>
       
       <div>
